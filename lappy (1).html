@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment-3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/quill/dist/quill.snow.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="first.css">
+
+</head>
+
+<body>
+
+
+    <!-- Main-Content -->
+
+    <div class="main-content w-100">
+
+
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-toggle navbar-expand-lg navbar-light bg-white shadow-sm px-3 z-2">
+
+            <div class="nav-1 container-fluid d-flex align-items-center  ">
+
+
+                <button class="navbar-toggler my-2 z-4 " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#side-col" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+
+                <!--logo-->
+                <div class="col-sm-6 col-md-2 logo-1">
+                    <img src="tcc logo.png" id="logo-img" alt="logo" class="img-fluid" style="max-width: 140px;">
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-col"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-col">
+                    <!-- Breadcrumb -->
+                    <div class="nav-header col-5 ps-2 align-items-center jsutify-content-start mt-3">
+
+                        <h5 class="navbar-title">Add Team Member</h5>
+                        <nav aria-label="breadcrumb">
+
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">Team Member</li>
+                                <span> > </span>
+                                <li class="breadcrumb-item">Team Member</li>
+                                <span> > </span>
+                                <li class="breadcrumb-item">Team Member</li>
+
+                            </ol>
+
+                        </nav>
+
+                    </div> <!--bar Icons & User Profile -->
+                    <div class="d-flex align-items-center flex-grow-1 justify-content-end gap-4">
+
+                        <!-- Language Dropdown -->
+
+                        <div class="LANG dropdown pe-5 me-5 ">
+
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <img src="united-states.png" height="27px" width="27px" id="USflag"> <span
+                                    id="EN">EN(UK)</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">EN(US)</a></li>
+                            </ul>
+
+                        </div>
+
+                        <!-- Notification Icon -->
+                        <span class="bold-text">|</span>
+                        <a href="#" class="nav-link ">
+                            <i class="fa fa-bell"></i>
+                        </a>
+
+
+                        <!--Settings icon-->
+                        <span class="bold-text ">|</span>
+                        <a href="#" class="nav-link me-3">
+                            <i class="fa fa-cog"></i>
+                        </a>
+
+                        <!-- User Profile Dropdown-->
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown" id="profileDropdown" role="button">
+                                <img src="model.jpg" height="43px" width="43px" class="rounded-circle me-2"
+                                    alt="User Profile">
+                                <div class="d-flex flex-column">
+                                    <span>Megan Roberts</span>
+                                    <span class="text-muted ms-1">Admin</span>
+                                </div>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a href="#" class="dropdown-item">Logout</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+
+
+    <!-- Sidebar-->
+
+
+    <div class="hero-section d-flex">
+
+        <div class="d-flex SIDEBAR  border-end z-1 shadow">
+
+
+
+            <div class="offcanvas-lg offcanvas-start sidebar" id="side-col">
+
+
+                <nav class="sidebar-container d-flex flex-column vh-100 mt-4 jsutify-content-evenly ">
+
+
+
+                    <ul class="sidebar-nav nav flex-column nn">
+
+                        <li class="sidebar-item nav-item  mt-3">
+                        <li class="p-2 ps-3 d-flex justify-content-between align-items-center" href="#">
+                            <span><img src="dashboard.png" alt="dashboard" height="20px" widtth="20px" class="me-3"></i>
+                                Dashboard </span>
+                            <i class="bi bi-chevron-right"></i>
+                        </li>
+
+                        </li>
+
+                        <li class="sidebar-item nav-item  mt-3">
+                        <li class="p-2 ps-3 d-flex justify-content-between align-items-center" href="" #>
+                            <span><img src="team_members.png" alt="team_members" height="20px" width="20px"
+                                    class="me-3">Team Members</span>
+                            <i class="bi-chevron-right"></i>
+                        </li>
+                        </li>
+
+
+
+                        <!-- Projects Link -->
+                        <li class="sidebar-item nav-item mt-3">
+                        <li class="p-2 ps-3 d-flex justify-content-between align-items-center" href="#">
+                            <span><img src="project.png" alt="project" height="20px" width="20px" class="me-3">
+                                Projects</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </li>
+                        </li>
+
+                        <!-- Clients Link -->
+                        <li class="sidebar-item nav-item  mt-3">
+                        <li class="p-2 ps-3 d-flex justify-content-between align-items-center" href="#">
+                            <span><img src="clients.png" alt="Clients" height="20px" width="20px" class="me-3">
+                                Clients</span>
+                            <i class="bi-chevron-right"></i>
+                        </li>
+                        </li>
+
+
+                        <li class="sidebar-item nav-item  mt-3" data-bs-toggle="collapse" data-bs-target="#teamMenu">
+                            <a class="sidebar-link nav-link d-flex justify-content-between align-items-center" href="#">
+                                <span><img src="learningpaths.png" alt="learningpaths" height="20px" width="20px"
+                                        class="me-3">Learning Paths</span>
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+
+                            <ul class="sidebar-submenu nav flex-column ms-4 collapse show" id="teamMenu">
+
+                                <li href="#" class="sidebar-sublink " href="#">
+                                    <img src="learnpath.png" alt="learnpath" height="20px" width="20px" class="me-3">
+                                    Learning Path
+                                </li>
+
+
+                                <li href="#" class="sidebar-sublink p-2 ps-3 " href="#">
+                                    <img src="courses.png" alt="courses" height="20px" width="20px" class="me-3">
+                                    Courses
+                                </li>
+
+
+                                <a class="sidebar-subitem nav-item nav-link sidebar-link">
+                                    <li href="#" class="sidebar-sublink p-2 ps-3 " href="#">
+                                        <img src="skillset.png" alt="skillsets" height="20px" width="20px" class="me-3">
+                                        Skill Sets
+                                    </li>
+                                </a>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="sidebar-item nav-item  mt-3" data-bs-toggle="collapse" data-bs-target="#teamMenu">
+                            <a class="sidebar-link nav-link d-flex justify-content-between align-items-center" href="#">
+                                <span><i class="bi bi-people-fill me-3"></i> Team Members</span>
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+
+
+
+                            <ul class="sidebar-submenu nav flex-column ms-4 collapse show" id="teamMenu">
+                                <a class="sidebar-subitem nav-item nav-link sidebar-link">
+                                    <li href="#" class="sidebar-sublink " href="#">
+                                        <i class="bi bi-people"></i> Team Member
+                                    </li>
+                                </a>
+
+                                <li class="sidebar-subitem nav-item">
+                                <li href="#" class="sidebar-sublink p-2 ps-3 " href="#">
+                                    <img src="certificatation.png" alt="certification" height="20px" width="20px"
+                                        class="me-3"> Certification
+                                </li>
+                        </li>
+
+
+                    </ul>
+                    </li>
+
+
+
+                    </ul>
+
+
+
+
+                </nav>
+
+
+            </div>
+        </div>
+
+
+        <div class="card d-flex w-100" style="overflow-x: hidden;">
+
+            <div class="container-fluid form-control-sm p-auto">
+                <div class="row w-100  mt-3 ms-3">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <span class="">
+                            <label class="form-label" style=" color: #303030;">Search Skills</label>
+                            <input type="text" class="form-control" placeholder="Search" style="color: #BABABA;">
+
+                        </span>
+
+                        <span class="pt-3" me-3 g-3>
+                            <button type="button" class="btn btn-outline-primary m-2 mt-0"><img src="Assets/del-big.png"
+                                    width="16px" height="16px;">DELETE</button>
+                            <button type="button" class="btn btn-primary m-2 mt-0 ">CREATE NEW SKILLS</button>
+
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="row ">
+                    <div class="p-3 mt-2 ms-0">
+                        <div id="skills-list">
+                            <div class="row align-items-center mb-2 g-2">
+                                <div class=" col-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/git.png" alt="Git" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">Git</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" col-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="colpad d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/dotnet.png" alt="asp" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">ASP.Net</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/c_sharp.png" alt="csharp" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">C#</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/js.png" alt="js" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">JavaScript</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/html.png" alt="html" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">HTML</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/python.png" alt="python" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Python</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/css3.png" alt="css" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">CSS</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/java.png" alt="Java" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">Java</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/bootstrap.png" alt="bootstrap" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Bootstrap</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/react.png" alt="react" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">React JS</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/typescript.png" alt="typescript" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Typescript</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/angular.png" alt="angular" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Angular JS</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/nodejs.png" alt="nodejs" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Node JS</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/machinelearning.png" alt="machinelearning"
+                                            class="me-2 flex-shrink-0" width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Machine Learning</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/ai.png" alt="ai" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">Artificial Intelligence</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/deeplearning.png" alt="deeplearning" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Deep Learning</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/dataanalysis.png" alt="dataanalysis" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Data Analysis</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/sql.png" alt="sql" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">SQL</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/mysql.png" alt="mysql" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">My SQL</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/datamanagement.png" alt="dbms" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Database Management</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/mongodb.png" alt="mongodb" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Mongo DB</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/sqlserver.png" alt="sqlserver" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">SQL Server</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/apachekafka.png" alt="kafka" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Apache Kafka</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/postregesql.png" alt="postgresql" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">PostgreSQL</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/oraclesql.png" alt="oraclesql" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">OracleSQL</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/docker.png" alt="docker" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Docker</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/kubernets.png" alt="kubernets" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Kubernets</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/jira.png" alt="jira" class="me-2 flex-shrink-0" width="32px;"
+                                            height="35px">
+                                        <span class="flex-grow-1 text-truncate">JIRA</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/apitesting.png" alt="apitesting" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">API Testing</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/databaseprogramming.png" alt="databaseprogramming"
+                                            class="me-2 flex-shrink-0" width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Database Programming</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/cypress.png" alt="cypress.io" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Cypress.io</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/automationtesting.png" alt="automationtesting"
+                                            class="me-2 flex-shrink-0" width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Automation Testing</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/github.png" alt="github" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">GitHub</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/confluence.png" alt="confluence" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">Confluence</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/devops.png" alt="devops" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">DevOps</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="colpad col-12 col-sm-12 col-md-6 col-lg-3 mt-4">
+                                    <div class="d-flex border rounded p-2 align-items-center">
+                                        <input type="checkbox" class="me-2 flex-shrink-0"
+                                            style="height: 25px; width: 20px;">
+                                        <img src="Assets/jenkins.png" alt="jenkins" class="me-2 flex-shrink-0"
+                                            width="32px;" height="35px">
+                                        <span class="flex-grow-1 text-truncate">JenKins</span>
+                                        <div class="trashicon d-flex">
+                                            <button class="trash btn btn-sm p-1"><img src="Assets/trash.png" alt="trash"
+                                                    style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                        <div class="pencilicon d-flex">
+                                            <button class="pencil btn btn-sm p-1 ms-1"><img src="Assets/pencil.png"
+                                                    alt="pencil" style="height: 20px; width: 18x;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                    crossorigin="anonymous">
+                    </script>
+            <script src="script.js"></script>
+
+</body>
+
+</html>
